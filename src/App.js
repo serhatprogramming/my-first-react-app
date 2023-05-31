@@ -1,22 +1,24 @@
 const Contact = (props) => {
   return (
     <div>
-      Name: {props.name}
+      Name: {props.contact.name}
       <br />
-      DOB: {props.dob}
+      DOB: {props.contact.dob}
       <br />
-      State: {props.state}
+      State: {props.contact.state}
       <hr />
     </div>
   );
 };
 
 const App = () => {
+  const john = { name: "John Doe", dob: "1990-01-0", state: "CA" };
+  const jane = { name: "Jane Doe", dob: "1980-01-01", state: "NY" };
   return (
     <div>
       <h1>Contacts</h1>
-      <Contact name="John Doe" dob="1990-01-01" state="CA" />
-      <Contact name="Jane Doe" dob="1980-01-01" state="NY" />
+      <Contact contact={john} />
+      <Contact contact={jane} />
     </div>
   );
 };
